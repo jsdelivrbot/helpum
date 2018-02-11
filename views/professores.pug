@@ -1,0 +1,13 @@
+extends layout
+
+block content
+        div(class="container")
+            br
+            br
+            br
+            div(class="row")
+                div(class='col s12 center&gt; &lt;form role="')
+                    div(class="form-group")
+                        input(class="form-control input-lg" ,id="jsonSearch" ,type="search", placeholder="Type the teacher name, email, telephone or department.")
+                    div(id="jsonSearchresults")
+        script(src="/javascripts/searchprof.js")

@@ -1,0 +1,12 @@
+.result {
+  padding: 12px !important;
+}
+.searchLi {
+  list-style: none;
+}
+.searchLiRight {
+  float: right;
+}
+.searchLi i {
+  margin-right: 10px;
+}

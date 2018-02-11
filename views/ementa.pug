@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    div(class="container")
+      div(class="row")
+        div(class="col-sm-6")
+          h1 Ementa
+        div(class="col-sm-5")
+          if status
+            p=status
+          else
+            form(method="post" action="/ementa")
+              div(class="form-group")
+                label(for="number") Receber a ementa por SMS:
+                input(type="text", placeholder="Número de telemóvel" class="form-control", name="number", id="number", pattern="^9[1236][0-9]{7}$", title="Insira um número de telemóvel válido")
+                input(type="submit" value="Registar")
+      if erro
+        h1=erro
+      else
+        div(class="row")
+            div(class='col s12 center&gt; &lt;form role="')
+                div(class="form-group")
+                if ementa
+                  each dia in ementa
+                    div(class="col s12 result card-panel", style="background-color:#efefef;margin-bottom:10px; border-radius: 10px;")
+                      div(class="col s12")
+                        p="Dia: "+dia.dia
+                        p="Almoço: "+dia.almoco
+                        p="Jantar: "+dia.jantar
+
