@@ -15,7 +15,7 @@ var pdfUtil = require('pdf-util');
 
 //Conexão à BD
 var mongoose = require('mongoose')
-mongoose.connect('mongodb://geral:geral@ds229448.mlab.com:29448/helpum')
+mongoose.connect('mongodb://XXXX:XXXXX@XXXXX')
 mongoose.Promise = global.Promise
 
 // view engine setup
@@ -36,8 +36,8 @@ app.use('/professores', professores);
 app.use('/users', users);
 
 var nexmo = new Nexmo({
-  apiKey: '02243002',
-  apiSecret: 'b9078a50ac4f1d1d'
+  apiKey: 'XXXXXXX',
+  apiSecret: 'XXXXXXXXXXXXX'
 });
 
 var j = schedule.scheduleJob('0 10 * * * *', function(){
